@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Accent Practice">
+  <meta name="theme-color" content="#0F2F59">
+  <meta name="description" content="अमेरिकी अंग्रेजी उच्चारण अभ्यास। Practice an American English accent.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAP4UlEQVR42u2deXQUx5nAq/qcUzMajUaDDnQjJBlzSCAuyYAAAysuxzGLCIEEAotiO7YTTNYvB37r+ACv8xyy3mCI4xizXiDYOHGQeRgTDJhjAQuMJCQhJIPQfUujObt7/xisCFs2NSNpeqT+fm/+QKimq7vq11/V113dwvWHFiAA6A8KmgAAOQCQAwA5AJADADkAkAMYXuBT08ZBKwAQOQCQAwA5gKGG+Rc7zDkAiByAr5EDIQytAEDkAEAOAOQAQA4A5ABADgBSWQAiBwByAEodVmBUASByACAHAHIAkMoCEDkAkAMAOQCQAwA5AJADACCVBYjlwOAGAMMKAHIAIAcAcgAgBwCpLACRAwA5AJADADkAAOQAyLMVSFYASGUBP+QABgeeYzLuS5yUFp+SEBkfbbGEGcyhehXHchwjCKLd4XI4XXanu9vmqG9uu93QVtfUVtvQVn27qbSyprmtKwiPCBsz1ga+1khLaPHhV0hKCqJonrLOjyrCjLrrH+0gLByetc4jiH47sSR38nfmZ83KSuc5P0+25rau0sqaazdqLxVXnbtcUVXTCJFj2IeKTSvnb1r1oMUUMsBNmUP12Zmp2Zmp3h8bWzrOXq44deHarv3HQI7hx/RJKa9tXRcbGT4UG7eEGZbMyZw1JV2Jckiim7io31UIQ7f/j35vwdbHv0tTI/xCAEQOn/n5hmVbNiwNzDmkzFQWD1lhv79FVH5l3owAmYGQJEnyXmiAK6Q+EBtpfnnL95RzvCCHDzz/05UaNQ9yAF8lPTlmYc4ERR0yA1OOO4XvVX710mxM/JBPZ1f3kWMnT5w6X3a96oubtZ3d3fYehyiJapXKaAixhIfFxUalJMWPSxuTOWlcdKR1kI8dspUAszQ3k6SYxyO88Mofduzc09Vt+/pvu7ptXd22W7frLhZd7f3P0dGRD+bOnJ87c9bMLJ1WE1SpLISOexdOiLFYw40k+UX+uif/9uFxn3b0Zk3trj/v3/Xn/RzLPjBzypqVyxcvmsOxrOyhAyIHEfenjCYpdvCvR+6YQdG0ykip9JhVY5pHFI0xhTBCoiiJgiS6JY9Tctslt110dkuCy/t1l9t99Pjpo8dPm0KNqx5ZsnzxPNkjB3Bv4qKILpP/5f0jCGHGEMnorYii+0sAaEzRGHGI0/4z3nicoqNDsHeIjk4kCQih1rb2HTvf2rFrryo6A+QIdswGoqnArdt1XHgSpQ71bfxjeFpnoXUWJEmis1PobhLsbUiSZD9qkIMIFUeTFAsxRVCt3QOYiWFKZaBUBkb0CLZmsacVrnMMA9wuJ0mxuXNyBme6TjGM3spFpIEcw4CW1jaSYgWr89KTo0fMUVNfXgAK/MenPFPmKlraOki2olbxf9+5Ze3yB1iGka9hB+0DkYOIsspbhCUNes1vn/n+1Q+2/ebJFTMmpXDsMJ7VwYSUiPNF5Q6nU8WT3nWzhBkK8ucV5M9zujxFpdUXi6s+K60uKqmuvNUoBUEaQiqHLO8E86lS//bQ1yq+vbzTI545XzQ7O8vX3eA5Jmt8Utb4JO+PXTb75Ws3PyupunD1xrkrlY0tHRA5hv/UjFW//uY+P+T4CnqtemZGysyMFO+PFdX1H58r/vCTolMXywRRBDmGpxy87v3DH5eWV6aOSRzEzSbHWZPjrBtX5Da3dR0oPPvmoRMV1fVBla0ARFceMKfd/IuXxKE5v82h+k35887u+4+3thWkJkZBKjvUqSwa3CoYvfXYiTNbX9wxhAZinDdr0id7f/2bJ1bwHAep7LCB1pgwq97+6u4/7T04tBVR1Kb8eR+9+UykJVT2yAGQwpniEEIFT2391fOvCsLQzh/Tk6ILd20JM+pAjmEyLVUZWGMMQmj7q7sfWLSq6ErpkFYXMyrsjRc2MjQFcgyT60KGKEZnQQhdLLo6ff6K7298+kpx2dBVl50x9rHVC0COYQMblsAaYxDCkiQdOFSYNefhuUvX/Gnvwbb2IbmiVZA/T67nIUAOP+MHPyqd+nI11+mzlwqe2hqTljN36ZoXf7vz5KcX7A7nYNUVZtStWZYtz2HKsoSV/PYCxsi/PcS+JGKi5HMtFKfnR90v2Jo9nbWiy4YQEgTx9NlLp89eQggxDH3/fWOnZo6fOnlCVub40dGRA2muhTkT/vudY3LIIce9FbfbQ9oHFMVxjIu4fC/kodjjEURR8u8WDq0z0zqz6OgUbE2CrVUSPb3bvFRUfKmo+LXd/4MQskaEPzBj8qzsrIVzcyIsZl9rmTwugecZp8sT+MghAw6nm7ywVs37I4eKJ96ZgQ4BlCqEUoWwYQmio0twdIiOTtHZ3fcZ+fqGpn3vHt737mGKorKnZRasz89bMJsifoMDz7ETUuPOXb6uCDnsTpcoioSto9Oo2jptvlah05LKYbP1oMG5N429lngHTtFlE53dorNLdHZJnjv+iaJ44vT5E6fPZ04c99bObfGxpMvGRhE8NTNCJqSCKDW3tBEWjo8y+1FFQjTpO3fqG5oH/wgxpngdE2LlwpNV0ZNUMRlceDKts2Da+6gSuvDZ5wseWtfRSboa2RSiUYocGFN19aTvREuKjfCjiuQ4K2HJ2oamIT9emqO1Zs6cqIrJ5K1ptMaEELpZU/v71/cQbiFUxykmlaWoyirShXcTU2P9qGHC2DjCklVf1AT00FUGzpLCjxqHGVXh0U+IEzxRFjlkueNHXb1GOr1akDOBpmiftq/XqnOmpBNu//PSGzLc8OT1vDW9po40fNrtDgXdlb1cUkl8FUifOy3dp40vm5tJvrL3SumNe5aJizLvfm59nF+zn28caxg+JII0vLW2tStmWEHo9MVS8qsdzz72HfL7T1o1/8yGJeSNfvX6vYcVClMPzZt8dt+z2zavjLaaBqsRJoy/n7DkrduNCpKjx4XPXbhMWDglftS2zStJ3p3CMvRrv/5BhNlAuOVjJ84ghjQR4Fhm/cOzLh587ve/XJOeNAgPL61fMZ+wZEV1rYLkwLz2wKFC8vJrl+f88bn1VrPxW9NXy/++8uji2RPJN3vgvULc54H3b5wOCs6+/uXnTT+595eFrz/9yMIsrb93xX72w0U5k1OJ8qm6xrpmGdap49ApG+SxQxS4jpKqK8fVKh8a1+5wvfvRheNnSy6X3Wxt7+6y2Q16TZhRn5EelzstffHsSSxDk2+tobE5OWMBE3nv1xzEWw0X39/W768cTveRU1cOf3L5H+dLm1o7SeqNigj9VcHy7y4gXcv+9r73H33+HUplCHAXyff3Vmi6y4nf2POXH/9oFfmX1CpuVd70VXnTB2UXfrdzj8jqiVrgm8uoeHZpbsbS3AxJksqq6j4r/eJK2c3KW4236luaWjt7HC6X26PmOb1WHR8dnpYYNW/6fbOmpPr0JNx7fzuKOXXgewqHZm2Ua2TxdNaHUu0l5wu1GnXga29obE6bstATEu+9JHXvyHHoJVlaqfrm7XEzlrFRMrzFRc71HLQuvLG5besLO2Sp/Yl/f97uEmm1zIt478l/7vijxIXIUrWccmCKZvQR/7Xr7eMnzwW46r37/3rog6OMIRLhoP5DVZeKit94+yCtDVOcHAghxhgjISp//VPXKm4ErNJPz1368U+fxTTHhIwKZjM6OrrWFmyRKI7WhCpRDkyzrGl0e3tn3iMbiq9dD4wZD61+1OlysWEJwfzYTo/d8a8/fLKi8gvGGCXXCyflbx0mJJJSG2/XNuQuXv3hRyeHejRZ9PCPOjq6aJ1FrlhNQmNTS94jG/5x6hzF6xi9Va7doNXRmbK3Ba0xCT2tDnvPvnf/XlffNCNrkko1yOut6xua1j/+i+2v7hYEgVKF8JYUn2YbPTZb+efnMYVHx0QyzNCukPrgyPFl+QVlFTcwxfDWtN4lIDLE9dCsfwuGc0XyOF0NxaKrByFkCNH9ZNPajT9YYQo1DnzLdfWNv9u5Z+cb73hXhFOqEC4iDVO+dbDkdjhqLiCEtBr1/NzspYty586aFmYa5KnAyU8vvPDKH+5MzzHFR6RRaqOMnRIsciCEJNHjbioTeu6sEONYdvGiOQ8veXB29lSDQe/r1pqaW4+dOHPgvcIjH5/sfXSR1lk4c5IfU41eOfqSkhw/dfKEaZMnTpsyMTkxFvub+JSWV35QeHz/e4evllb0TsU4S+qdFYcgRy+ernpPa3XvMm6EEE1T48eljk8fe1/amPjY6EhreITFrNGoVSqeZRiX2+1wuLq7bQ2NzbUNjTeqbn1eUl50paT42vW+L1jCNMeGJfo/z5BEwdYk2FoEe3u/6270Om1iwujE+NEJcTGJcaPjYqOMIXqtVqPVqLVajVajQQg5XS6Hw9Hc0t7U3Hqzprb8enVxafmZ/yv6yopJWmNizckyjibBK4c3hHg6bguddX0VGUBCxDGGKCZk1ODkJpIg9LQJPS2ivV0S3IN74N5nceUdSu5qOtPUoJPjy26QhJ4WT3ezaG/3wxJMs7TaSOvCaU3oEKWCotsuOjrvfNx2/53gNLTGROvCKYL7wwFNJIP3GhDGtNZMa80ISaLTJrq6RVeP5HZIgkvyuJAkSJKIJAlhCmMKUTSmWUxzmFVTnJbitQFoaIpVU6wa6SO8w47ktkseh+h2eP8hiYIkCkgUkCRI3vcBYYwpClMsolmKUWFWTXEaShUSDCPIcJOjjyYUr6N4XXDvIo15HeJ1NBo5MDL/pSggiIGn7AGQAwA5AJADADkAkAOAVDZ4Kfl5P+vQ0l5MUHizYNPUAnDi21GsJdTw/2NTfn4IzbjjkCKbCJumKS5ylGzxczFz2ksJCoscYEZAvgtyACNNDgWNogM/9Uu23FBOcykocpRsqQyq7cCwAoAcAMgBY4qiRhaIHADIAfgO3HjzG6wAOcANcAOGFQDk6J+0bUlBuzWQAwA5AJBDySOLQsYUhBA2TX9sZBxJydMVX3ZeMkkxf81IHvg+QOQAQI7hN7gky/Ld4QijwBPC28c+jS9K02KkRY7e/iPsdfL+Jiw5wiYcCo0chD4pM1rcJQceifcISp6uSN/uQ9f2W9inlineXOHfF4N8WBk5C2LTt4/p27mB/fR6NgYWGAcpvX4Uby4PWKW9dd1tJ0xIg5jA+BFICwMMDpvx+IjXYohO6MDUAnIERc/5NDqMeDNGcirr7a3eLvT+Y1C6UAlajPw5x9d7rnhz+UCmCF//+gg2AylhgXH69hSEUPHmsn5Pfe9vvz7a9ilc9i2bHdngsBk/QYrhm3raD9uUgLLkGKAiytFCuXL4JIrShLhbjpmKluMuUX52R5T0l1OgNRCsBANADgBS2cEbbaEJvHOOJ0bc1OGaLPWmvzwWhhUA5hwAyAFNAChozgFA5AAglQUgcgBBGTkgcAAQOQCQAwA5AJADgFQWgMgBgBwAyAGAHADIAQBfzVYwhmwF6J//B/jdTkjV3n2xAAAAAElFTkSuQmCC">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <title>American Accent Practice</title>
+  <style>
+    :root {
+      --bg: #F6F1E8;
+      --ink: #152033;
+      --muted: #5C6573;
+      --navy: #0F2F59;
+      --navy-2: #1A4A86;
+      --gold: #C8962E;
+      --red: #C4392D;
+      --green: #1F7A4D;
+      --ok: #2C6BAA;
+      --card: #FFFFFF;
+      --line: #E6DFD2;
+      --shadow: 0 10px 28px rgba(21, 32, 51, 0.08);
+      --safe-t: env(safe-area-inset-top, 0px);
+      --safe-b: env(safe-area-inset-bottom, 0px);
+      --safe-l: env(safe-area-inset-left, 0px);
+      --safe-r: env(safe-area-inset-right, 0px);
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans Devanagari", "Noto Sans", "Hiragino Sans", system-ui, sans-serif;
+    }
+    body {
+      padding: calc(12px + var(--safe-t)) calc(16px + var(--safe-r)) calc(20px + var(--safe-b)) calc(16px + var(--safe-l));
+    }
+    button, input { font: inherit; }
+    button {
+      appearance: none;
+      border: 0;
+      cursor: pointer;
+      border-radius: 18px;
+      transition: transform 0.08s ease, filter 0.15s ease, background 0.15s ease;
+    }
+    button:active { transform: scale(0.98); }
+    button:disabled { opacity: 0.45; cursor: default; transform: none; }
+    .wrap {
+      max-width: 430px;
+      margin: 0 auto;
+    }
+    .en {
+      display: block;
+      font-size: 0.72em;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .banner {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 18px;
+      padding: 14px 14px 14px 16px;
+      margin-bottom: 14px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      box-shadow: var(--shadow);
+    }
+    .banner p { margin: 0; font-size: 17px; line-height: 1.4; font-weight: 650; }
+    .banner .en { color: rgba(255,255,255,0.75); font-weight: 400; font-size: 13px; margin-top: 4px; }
+    .banner .x {
+      flex: 0 0 auto;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      font-size: 22px;
+      line-height: 1;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .ghost {
+      background: #fff;
+      color: var(--navy);
+      border: 2px solid var(--line);
+      min-height: 52px;
+      padding: 0 16px;
+      font-size: 18px;
+      font-weight: 700;
+      box-shadow: none;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 8px 0 18px;
+    }
+    .brand img {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.25;
+      color: var(--navy);
+      font-weight: 800;
+    }
+    .lead {
+      font-size: 20px;
+      line-height: 1.45;
+      margin: 0 0 22px;
+      font-weight: 650;
+    }
+    .lead .en { font-weight: 400; font-size: 15px; margin-top: 4px; }
+    .start {
+      width: 100%;
+      min-height: 96px;
+      background: var(--red);
+      color: #fff;
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      box-shadow: 0 12px 24px rgba(196, 57, 45, 0.28);
+      margin-bottom: 16px;
+    }
+    .start .en { color: rgba(255,255,255,0.85); font-size: 16px; font-weight: 600; }
+    .start:active { filter: brightness(0.95); }
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--card);
+      border: 2px solid var(--line);
+      border-radius: 18px;
+      padding: 10px 14px;
+      min-height: 64px;
+      margin-bottom: 22px;
+    }
+    .toggle-row span { font-size: 20px; font-weight: 750; }
+    .switch {
+      width: 68px;
+      height: 40px;
+      border-radius: 999px;
+      background: #D7D1C6;
+      position: relative;
+      padding: 0;
+      flex: 0 0 auto;
+    }
+    .switch.on { background: var(--navy); }
+    .switch i {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 32px;
+      height: 32px;
+      background: #fff;
+      border-radius: 50%;
+      transition: left 0.16s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    .switch.on i { left: 32px; }
+    .progress-card, .card {
+      background: var(--card);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+    }
+    .progress-label { font-size: 18px; font-weight: 750; margin: 0 0 10px; }
+    .bar {
+      height: 12px;
+      background: #EEE8DC;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .bar > i {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--navy), var(--navy-2));
+      border-radius: 99px;
+      width: 0;
+    }
+    h2 { font-size: 22px; margin: 8px 0 12px; color: var(--navy); }
+    .lesson-btn {
+      width: 100%;
+      text-align: left;
+      background: var(--card);
+      border: 2px solid var(--line);
+      border-radius: 18px;
+      padding: 16px 16px;
+      margin-bottom: 10px;
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .lesson-btn strong { display: block; font-size: 20px; font-weight: 800; }
+    .lesson-btn .meta { font-size: 15px; color: var(--muted); margin-top: 2px; }
+    .check {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: #E8F4EC; color: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; flex: 0 0 auto; font-size: 18px;
+    }
+    .check.empty { background: #F1EEE7; color: #B3AB9E; }
+    .dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 6px 0 16px;
+    }
+    .dots b {
+      width: 12px; height: 12px; border-radius: 50%;
+      background: #D9D3C7;
+      display: block;
+    }
+    .dots b.on { background: var(--navy); transform: scale(1.2); }
+    .dots b.done { background: var(--green); }
+    .step-kicker {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 750;
+      color: var(--navy);
+      margin: 0 0 8px;
+    }
+    .phrase {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 26px 18px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      margin-bottom: 14px;
+    }
+    .phrase .text {
+      font-size: 30px;
+      line-height: 1.3;
+      font-weight: 800;
+      color: var(--ink);
+    }
+    .hint {
+      margin: 12px 0 0;
+      font-size: 17px;
+      line-height: 1.4;
+      color: var(--navy-2);
+      font-weight: 650;
+    }
+    .instr {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 800;
+      margin: 4px 0 16px;
+      line-height: 1.35;
+    }
+    .btn {
+      width: 100%;
+      min-height: 72px;
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+    .btn .en { color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 600; }
+    .btn-navy { background: var(--navy); }
+    .btn-red { background: var(--red); box-shadow: 0 10px 20px rgba(196,57,45,0.22); }
+    .btn-green { background: var(--green); }
+    .btn-ok { background: var(--ok); }
+    .btn-gold { background: var(--gold); color: #1A1406; }
+    .btn-gold .en { color: rgba(26,20,6,0.7); }
+    .btn.rec-on {
+      background: #9B1C1C;
+      animation: pulse 1.1s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      50% { filter: brightness(1.12); }
+    }
+    .row-2, .row-3 {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .row-2 { grid-template-columns: 1fr 1fr; }
+    .row-3 { grid-template-columns: 1fr 1fr 1fr; }
+    .row-2 .btn, .row-3 .btn { min-height: 80px; font-size: 20px; margin: 0; }
+    .row-3 .btn { font-size: 18px; padding: 8px 6px; }
+    .status {
+      text-align: center;
+      min-height: 24px;
+      font-size: 16px;
+      color: var(--muted);
+      font-weight: 650;
+      margin: 0 0 10px;
+    }
+    .error { color: var(--red); font-weight: 750; text-align: center; font-size: 17px; margin: 0 0 12px; }
+    .next {
+      width: 100%;
+      min-height: 76px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 26px;
+      font-weight: 800;
+      margin-top: 6px;
+    }
+    .next .en { color: rgba(255,255,255,0.85); font-size: 15px; }
+    .tiny {
+      text-align: center;
+      color: var(--muted);
+      font-size: 15px;
+      margin-top: 18px;
+    }
+    .done-card { text-align: center; padding: 28px 18px; }
+    .done-card h2 { font-size: 28px; margin-bottom: 8px; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="wrap" id="app"></div>
+  <script>
+    const STORAGE_KEY = "aap-v1";
+    const INSTALL_KEY = "aap-install-hint-dismissed";
+
+    const LESSONS = [
+      {
+        id: "first",
+        titleNe: "पहिलो अभ्यास",
+        titleEn: "First practice",
+        tipNe: "वाक्य सुन्नुहोस्, दोहोर्याउनुहोस्, अनि तुलना गर्नुहोस्।",
+        items: [
+          { text: "I really like that red car.", hintNe: "really र red मा R लाई जिब्रो पछाडि मोडेर भन्नुहोस्।" },
+          { text: "I really like that red car, don't you?", hintNe: "don't you लाई जोडेर 'डोन्चू' जस्तै भन्नुहोस्।" },
+          { text: "Can I grab a better battery for that?", hintNe: "better र battery मा T नरम 'D' जस्तो सुनिन्छ।" },
+          { text: "Water, please.", hintNe: "water मा T नरम हुन्छ: 'वाडर'।" },
+          { text: "See you later.", hintNe: "later मा T पनि नरम 'D' जस्तै।" }
+        ]
+      },
+      {
+        id: "flap-t",
+        titleNe: "नरम T",
+        titleEn: "The soft T",
+        tipNe: "बेटर, ब्याट्री जस्ता शब्दमा T लाई नरम D जस्तै भन्नुहोस्।",
+        items: [
+          { text: "better", hintNe: "बे-डर।" },
+          { text: "battery", hintNe: "ब्या-डरी।" },
+          { text: "a better battery", hintNe: "दुवै T नरम।" },
+          { text: "Can I grab a better battery than that?", hintNe: "grab a लाई जोडेर भन्नुहोस्।" },
+          { text: "It's a little better.", hintNe: "little र better दुवैमा नरम T।" }
+        ]
+      },
+      {
+        id: "r-sound",
+        titleNe: "अमेरिकी R",
+        titleEn: "American R",
+        tipNe: "R भन्दा जिब्रो माथि-पछाडि मोड्नुहोस्, तर तालुलाई नछुनुहोस्।",
+        items: [
+          { text: "red", hintNe: "शुरुमै R सुनिने गरी।" },
+          { text: "car", hintNe: "अन्त्यको R छोड्नुहोस् न।" },
+          { text: "really", hintNe: "re मा बलियो R।" },
+          { text: "right here", hintNe: "दुवै शब्दमा R राख्नुहोस्।" },
+          { text: "I really like that red car.", hintNe: "really, red, र car मा R।" }
+        ]
+      },
+      {
+        id: "th",
+        titleNe: "TH को आवाज",
+        titleEn: "TH sounds",
+        tipNe: "जिब्रो दाँतको बीचमा हल्का राखेर हावा निकाल्नुहोस्। T वा D नभन्नुहोस्।",
+        items: [
+          { text: "the", hintNe: "जिब्रो दाँतमा, आवाज सहित।" },
+          { text: "that", hintNe: "th मा हावा र आवाज।" },
+          { text: "think", hintNe: "think मा हावा मात्र, आवाज कम।" },
+          { text: "Thank you.", hintNe: "Thank को th नरम राख्नुहोस्।" },
+          { text: "I think that's right.", hintNe: "think र that's दुवैमा TH।" }
+        ]
+      },
+      {
+        id: "v-w",
+        titleNe: "V र W",
+        titleEn: "V and W",
+        tipNe: "V मा माथिल्लो दाँत ओठमा छुन्छ। W मा ओठ गोलाकार हुन्छ, दाँत छुँदैन।",
+        items: [
+          { text: "very", hintNe: "V: दाँत ओठमा।" },
+          { text: "well", hintNe: "W: ओठ गोलाकार।" },
+          { text: "very well", hintNe: "पहिलो V, दोस्रो W।" },
+          { text: "We want water.", hintNe: "We र want मा W।" },
+          { text: "Would you like water?", hintNe: "Would र water मा W राख्नुहोस्।" }
+        ]
+      },
+      {
+        id: "linking",
+        titleNe: "शब्द जोडाइ",
+        titleEn: "Linking words",
+        tipNe: "अमेरिकी अंग्रेजीमा शब्दहरू जोडिएर बोलिन्छ, एक-एक गरी होइन।",
+        items: [
+          { text: "don't you", hintNe: "जोडेर 'डोन्चू'।" },
+          { text: "can't you", hintNe: "जोडेर 'क्यान्चू'।" },
+          { text: "grab a", hintNe: "b र a जोडिएर 'ग्र्याब-अ'।" },
+          { text: "I really like it.", hintNe: "like it जोडिएर 'लाइक-इट'।" },
+          { text: "Can I help you with that?", hintNe: "शब्दहरू बीचमा रोक्नुहोस् न।" }
+        ]
+      },
+      {
+        id: "daily",
+        titleNe: "दैनिक वाक्य",
+        titleEn: "Daily phrases",
+        tipNe: "रोक-रोक नगरी, स्वाभाविक गतिमा भन्नुहोस्।",
+        items: [
+          { text: "How are you today?", hintNe: "are you जोडेर भन्नुहोस्।" },
+          { text: "I'm doing well, thanks.", hintNe: "I'm छोटो: 'आइम'।" },
+          { text: "Can I help you with that?", hintNe: "help you with जोडिएर बोलिन्छ।" },
+          { text: "That sounds great.", hintNe: "That को TH र great को T ध्यान दिनुहोस्।" },
+          { text: "See you tomorrow.", hintNe: "See you जोडेर 'सी-यू'।" }
+        ]
+      },
+      {
+        id: "vowels",
+        titleNe: "छोटा स्वर",
+        titleEn: "Short vowels",
+        tipNe: "cat, cut, cot जस्ता छोटा स्वरलाई फरक सुनिने गरी भन्नुहोस्।",
+        items: [
+          { text: "I have a black bag.", hintNe: "have, black, bag मा छोटो 'a' (एश्)।" },
+          { text: "That's a good book.", hintNe: "good र book मा छोटो 'u'।" },
+          { text: "The cup is on the bus.", hintNe: "cup र bus मा छोटो 'uh'।" },
+          { text: "I really like that red car.", hintNe: "like को स्वर लामो, that छोटो।" },
+          { text: "Can I grab a better battery for that?", hintNe: "स्वराघात battery को पहिलो अक्षरमा।" }
+        ]
+      }
+    ];
+
+    const defaultState = () => ({
+      guidedDone: false,
+      slow: false,
+      lastLesson: 0,
+      lastItem: 0,
+      ratings: {}
+    });
+
+    function loadState() {
+      try {
+        return Object.assign(defaultState(), JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"));
+      } catch (e) {
+        return defaultState();
+      }
+    }
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    let state = loadState();
+    let screen = "home";
+    let lessonIndex = 0;
+    let itemIndex = 0;
+    let guided = false;
+    let step = 0;
+    let heard = false;
+    let recorded = false;
+    let compared = false;
+    let rated = false;
+    let recording = false;
+    let mediaRecorder = null;
+    let recStream = null;
+    let recChunks = [];
+    let recUrl = "";
+    let recPlayer = null;
+    let errorMsg = "";
+    let speaking = false;
+
+    function itemId(l, i) { return LESSONS[l].id + ":" + i; }
+    function totalItems() { return LESSONS.reduce((n, l) => n + l.items.length, 0); }
+    function completedCount() { return Object.keys(state.ratings).length; }
+    function lessonDoneCount(l) {
+      return LESSONS[l].items.reduce((n, _, i) => n + (state.ratings[itemId(l, i)] ? 1 : 0), 0);
+    }
+
+    function findContinue() {
+      for (let l = 0; l < LESSONS.length; l++) {
+        for (let i = 0; i < LESSONS[l].items.length; i++) {
+          if (!state.ratings[itemId(l, i)]) return { l, i };
+        }
+      }
+      return { l: 0, i: 0 };
+    }
+
+    function isIOS() {
+      const ua = navigator.userAgent || "";
+      if (/iPad|iPhone|iPod/.test(ua)) return true;
+      return navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+    }
+    function isStandalone() {
+      return window.navigator.standalone === true ||
+        window.matchMedia("(display-mode: standalone)").matches;
+    }
+    function isSafari() {
+      const ua = navigator.userAgent || "";
+      if (/CriOS|FxiOS|EdgiOS|OPiOS|OPT\/|DuckDuckGo|YaBrowser/.test(ua)) return false;
+      return /Safari/.test(ua) && /Version\//.test(ua);
+    }
+    function installDismissed() {
+      return localStorage.getItem(INSTALL_KEY) === "1";
+    }
+    function dismissInstall() {
+      localStorage.setItem(INSTALL_KEY, "1");
+      render();
+    }
+
+    function preferVoice() {
+      const list = speechSynthesis.getVoices() || [];
+      const tests = [
+        (v) => /en-US/i.test(v.lang) && /Samantha|Aaron|Nicky|Susan|Tom|Allison|Ava|Zoe|Evan|Nathan/.test(v.name),
+        (v) => /en-US/i.test(v.lang) && /Google/.test(v.name),
+        (v) => /en-US|en_US/i.test(v.lang),
+        (v) => /^en/i.test(v.lang) && /US|United States|American/.test(v.name + v.lang),
+        (v) => /^en/i.test(v.lang)
+      ];
+      for (const t of tests) {
+        const found = list.find(t);
+        if (found) return found;
+      }
+      return null;
+    }
+
+    function stopSpeech() {
+      try { speechSynthesis.cancel(); } catch (e) {}
+      speaking = false;
+    }
+
+    function speakCurrent() {
+      const text = LESSONS[lessonIndex].items[itemIndex].text;
+      stopSpeech();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = "en-US";
+      const voice = preferVoice();
+      if (voice) u.voice = voice;
+      u.rate = state.slow ? 0.68 : 0.92;
+      u.pitch = 1;
+      speaking = true;
+      u.onend = () => { speaking = false; heard = true; render(); };
+      u.onerror = () => { speaking = false; render(); };
+      speechSynthesis.speak(u);
+      heard = true;
+      render();
+    }
+
+    function pickMime() {
+      const types = ["audio/mp4", "audio/webm;codecs=opus", "audio/webm", "audio/aac"];
+      return types.find((t) => window.MediaRecorder && MediaRecorder.isTypeSupported(t)) || "";
+    }
+
+    function clearRecording() {
+      if (recPlayer) { try { recPlayer.pause(); } catch (e) {} recPlayer = null; }
+      if (recUrl) { URL.revokeObjectURL(recUrl); recUrl = ""; }
+      recChunks = [];
+      recorded = false;
+      compared = false;
+    }
+
+    async function toggleRecord() {
+      errorMsg = "";
+      if (recording) {
+        try { if (mediaRecorder && mediaRecorder.state === "recording") mediaRecorder.stop(); } catch (e) {}
+        recording = false;
+        render();
+        return;
+      }
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        errorMsg = "यो ब्राउजरमा रेकर्ड चल्दैन। / Recording is not supported here.";
+        render();
+        return;
+      }
+      try {
+        recStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        const mime = pickMime();
+        recChunks = [];
+        mediaRecorder = mime ? new MediaRecorder(recStream, { mimeType: mime }) : new MediaRecorder(recStream);
+        mediaRecorder.ondataavailable = (e) => { if (e.data && e.data.size) recChunks.push(e.data); };
+        mediaRecorder.onstop = () => {
+          if (recStream) recStream.getTracks().forEach((t) => t.stop());
+          recStream = null;
+          if (recUrl) URL.revokeObjectURL(recUrl);
+          const type = (mediaRecorder && mediaRecorder.mimeType) || mime || "audio/webm";
+          recUrl = URL.createObjectURL(new Blob(recChunks, { type: type }));
+          recorded = true;
+          recording = false;
+          render();
+        };
+        mediaRecorder.start();
+        recording = true;
+        render();
+      } catch (err) {
+        errorMsg = "माइक खोल्न सकिएन। सेटिङमा अनुमति दिनुहोस्। / Allow the microphone in Settings.";
+        recording = false;
+        render();
+      }
+    }
+
+    function playMe() {
+      if (!recUrl) return;
+      if (recPlayer) { try { recPlayer.pause(); } catch (e) {} }
+      recPlayer = new Audio(recUrl);
+      recPlayer.play();
+      compared = true;
+      render();
+    }
+
+    function playModel() {
+      speakCurrent();
+      compared = true;
+    }
+
+    function setSlow(on) {
+      state.slow = on;
+      saveState();
+      render();
+    }
+
+    function rate(value) {
+      state.ratings[itemId(lessonIndex, itemIndex)] = value;
+      state.lastLesson = lessonIndex;
+      state.lastItem = itemIndex;
+      rated = true;
+      if (guided) state.guidedDone = true;
+      saveState();
+      render();
+    }
+
+    function resetItemFlags() {
+      stopSpeech();
+      if (recording && mediaRecorder) {
+        try { mediaRecorder.stop(); } catch (e) {}
+      }
+      recording = false;
+      clearRecording();
+      heard = false;
+      recorded = false;
+      compared = false;
+      rated = !!state.ratings[itemId(lessonIndex, itemIndex)];
+      step = 0;
+      errorMsg = "";
+    }
+
+    function openPractice(l, i, asGuided) {
+      lessonIndex = l;
+      itemIndex = i;
+      guided = !!asGuided && !state.guidedDone;
+      screen = "practice";
+      resetItemFlags();
+      render();
+    }
+
+    function startFromHome() {
+      if (!state.guidedDone) {
+        openPractice(0, 0, true);
+        return;
+      }
+      const nxt = findContinue();
+      openPractice(nxt.l, nxt.i, false);
+    }
+
+    function nextItem() {
+      if (guided) {
+        state.guidedDone = true;
+        saveState();
+        guided = false;
+      }
+      const lesson = LESSONS[lessonIndex];
+      if (itemIndex < lesson.items.length - 1) {
+        itemIndex += 1;
+        state.lastLesson = lessonIndex;
+        state.lastItem = itemIndex;
+        saveState();
+        resetItemFlags();
+        render();
+        return;
+      }
+      if (lessonIndex < LESSONS.length - 1) {
+        screen = "lesson-done";
+        render();
+        return;
+      }
+      screen = "all-done";
+      render();
+    }
+
+    function goNextLesson() {
+      const l = Math.min(lessonIndex + 1, LESSONS.length - 1);
+      openPractice(l, 0, false);
+    }
+
+    function canAdvanceGuided() {
+      if (step === 0) return heard;
+      if (step === 1) return recorded;
+      if (step === 2) return compared;
+      if (step === 3) return rated;
+      return false;
+    }
+
+    function guidedNext() {
+      if (step < 3) {
+        step += 1;
+        render();
+        return;
+      }
+      nextItem();
+    }
+
+    function registerWorker() {
+      if (!("serviceWorker" in navigator)) return;
+      if (location.protocol !== "https:") return;
+      navigator.serviceWorker.register("./sw.js").catch(() => {});
+    }
+
+    try { speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged = () => {}; } catch (e) {}
+
+    function renderBanner() {
+      if (!isIOS() || isStandalone() || installDismissed()) return "";
+      if (isSafari()) {
+        return `<div class="banner" role="status">
+          <div>
+            <p>होम स्क्रिनमा राख्न Share थिच्नुहोस्, अनि Add to Home Screen छान्नुहोस्।
+              <span class="en">In Safari, tap Share, then Add to Home Screen.</span>
+            </p>
+          </div>
+          <button class="x" type="button" data-act="dismiss-install" aria-label="बन्द गर्नुहोस्">×</button>
+        </div>`;
+      }
+      return `<div class="banner" role="status">
+        <div>
+          <p>यो एप Safari मा खोल्नुहोस्, अनि Share बाट Add to Home Screen गर्नुहोस्।
+            <span class="en">Please open this in Safari to add it to your Home Screen.</span>
+          </p>
+        </div>
+        <button class="x" type="button" data-act="dismiss-install" aria-label="बन्द गर्नुहोस्">×</button>
+      </div>`;
+    }
+
+    function slowToggle(compact) {
+      const on = state.slow ? "on" : "";
+      return `<div class="toggle-row">
+        <span>ढिलो <span class="en">Slow</span></span>
+        <button type="button" class="switch ${on}" data-act="toggle-slow" role="switch" aria-checked="${state.slow ? "true" : "false"}" aria-label="ढिलो"><i></i></button>
+      </div>`;
+    }
+
+    function renderHome() {
+      const done = completedCount();
+      const total = totalItems();
+      const started = done > 0 || state.guidedDone;
+      const startLabel = started
+        ? `जारी राख्नुहोस्<span class="en">Continue</span>`
+        : `सुरु गर्नुहोस्<span class="en">Start</span>`;
+      const pct = total ? Math.round((done / total) * 100) : 0;
+      let lessons = "";
+      if (started) {
+        lessons = `<h2>पाठहरू <span class="en">Lessons</span></h2>` + LESSONS.map((lesson, l) => {
+          const d = lessonDoneCount(l);
+          const all = d === lesson.items.length;
+          return `<button type="button" class="lesson-btn" data-act="open-lesson" data-l="${l}">
+            <div>
+              <strong>${lesson.titleNe}</strong>
+              <div class="meta">${lesson.titleEn} · ${d}/${lesson.items.length}</div>
+            </div>
+            <div class="check ${all ? "" : "empty"}">${all ? "✓" : (l + 1)}</div>
+          </button>`;
+        }).join("");
+      }
+      const progress = started ? `<div class="progress-card">
+        <p class="progress-label">${total} मध्ये ${done} सकियो<span class="en">${done} of ${total} completed</span></p>
+        <div class="bar"><i style="width:${pct}%"></i></div>
+      </div>` : "";
+      return `${renderBanner()}
+        <div class="brand">
+          <img src="icon-192.png" alt="" width="64" height="64">
+          <h1>अमेरिकी उच्चारण अभ्यास<span class="en">American Accent Practice</span></h1>
+        </div>
+        <p class="lead">सुन्नुहोस्, दोहोर्याउनुहोस्, तुलना गर्नुहोस्।
+          <span class="en">Listen, repeat, and compare.</span>
+        </p>
+        <button type="button" class="start" data-act="start">${startLabel}</button>
+        ${slowToggle()}
+        ${progress}
+        ${lessons}
+        <p class="tiny">माइक र स्पिकर चाहिन्छ।<span class="en">Needs a microphone and speaker.</span></p>`;
+    }
+
+    function renderPractice() {
+      const lesson = LESSONS[lessonIndex];
+      const item = lesson.items[itemIndex];
+      const steps = [
+        { ne: "सुन्नुहोस्", en: "Listen" },
+        { ne: "रेकर्ड गर्नुहोस्", en: "Record" },
+        { ne: "तुलना गर्नुहोस्", en: "Compare" },
+        { ne: "अंक दिनुहोस्", en: "Rate" }
+      ];
+      const top = `<div class="topbar">
+        <button type="button" class="ghost" data-act="home">← गृह<span class="en">Home</span></button>
+        <div style="text-align:right;font-weight:800;color:var(--navy);font-size:16px">
+          ${lesson.titleNe}<div class="en">${itemIndex + 1} / ${lesson.items.length}</div>
+        </div>
+      </div>`;
+
+      const phrase = `<div class="phrase">
+        <div class="text">${item.text}</div>
+        <p class="hint">${item.hintNe || lesson.tipNe}</p>
+      </div>`;
+
+      if (guided) {
+        const dots = `<div class="dots">${steps.map((_, i) =>
+          `<b class="${i === step ? "on" : (i < step ? "done" : "")}"></b>`
+        ).join("")}</div>`;
+        const kicker = `<p class="step-kicker">चरण ${step + 1} / ४<span class="en">Step ${step + 1} of 4</span></p>`;
+        let body = "";
+        if (step === 0) {
+          body = `<p class="instr">यो वाक्य राम्ररी सुन्नुहोस्।<span class="en">Listen to this sentence.</span></p>
+            <button type="button" class="btn btn-navy" data-act="listen">सुन्नुहोस्<span class="en">Listen</span></button>`;
+        } else if (step === 1) {
+          body = `<p class="instr">माइक थिचेर त्यही वाक्य दोहोर्याउनुहोस्।<span class="en">Tap record and say the same sentence.</span></p>
+            <button type="button" class="btn btn-red ${recording ? "rec-on" : ""}" data-act="record">
+              ${recording ? "रोक्नुहोस्<span class=\"en\">Stop</span>" : "रेकर्ड गर्नुहोस्<span class=\"en\">Record</span>"}
+            </button>
+            ${recorded ? `<p class="status">रेकर्ड भयो।<span class="en">Saved. Go to the next step.</span></p>` : ""}`;
+        } else if (step === 2) {
+          body = `<p class="instr">नमूना र आफ्नो आवाज सुन्नुहोस्।<span class="en">Play the model, then play yourself.</span></p>
+            <div class="row-2">
+              <button type="button" class="btn btn-navy" data-act="listen">नमूना<span class="en">Model</span></button>
+              <button type="button" class="btn btn-ok" data-act="play-me" ${recUrl ? "" : "disabled"}>मेरो आवाज<span class="en">Me</span></button>
+            </div>`;
+        } else {
+          body = `<p class="instr">तपाईंलाई कस्तो लाग्यो?<span class="en">How did you do?</span></p>
+            <div class="row-3">
+              <button type="button" class="btn btn-gold" data-act="rate" data-v="1">गाह्रो<span class="en">Hard</span></button>
+              <button type="button" class="btn btn-ok" data-act="rate" data-v="2">ठीक छ<span class="en">OK</span></button>
+              <button type="button" class="btn btn-green" data-act="rate" data-v="3">राम्रो<span class="en">Good</span></button>
+            </div>
+            ${rated ? `<p class="status">धन्यवाद। अर्को थिच्नुहोस्।<span class="en">Thanks. Tap Next.</span></p>` : ""}`;
+        }
+        const nextEnabled = canAdvanceGuided();
+        const nextLabel = step < 3
+          ? `अर्को<span class="en">Next</span>`
+          : `अभ्यास जारी<span class="en">Continue practice</span>`;
+        return `${top}${kicker}${dots}${phrase}${errorMsg ? `<p class="error">${errorMsg}</p>` : ""}${body}
+          <button type="button" class="next" data-act="guided-next" ${nextEnabled ? "" : "disabled"}>${nextLabel}</button>
+          ${slowToggle()}`;
+      }
+
+      const ratedVal = state.ratings[itemId(lessonIndex, itemIndex)];
+      return `${top}
+        <p class="step-kicker">${lesson.tipNe}<span class="en">${lesson.titleEn}</span></p>
+        ${phrase}
+        ${errorMsg ? `<p class="error">${errorMsg}</p>` : ""}
+        <button type="button" class="btn btn-navy" data-act="listen">सुन्नुहोस्<span class="en">Listen</span></button>
+        <button type="button" class="btn btn-red ${recording ? "rec-on" : ""}" data-act="record">
+          ${recording ? "रोक्नुहोस्<span class=\"en\">Stop</span>" : "रेकर्ड गर्नुहोस्<span class=\"en\">Record</span>"}
+        </button>
+        <div class="row-2">
+          <button type="button" class="btn btn-navy" data-act="listen">नमूना<span class="en">Model</span></button>
+          <button type="button" class="btn btn-ok" data-act="play-me" ${recUrl ? "" : "disabled"}>मेरो आवाज<span class="en">Me</span></button>
+        </div>
+        <p class="instr" style="font-size:20px;margin-top:8px">अंक दिनुहोस्<span class="en">Rate yourself</span></p>
+        <div class="row-3">
+          <button type="button" class="btn btn-gold" data-act="rate" data-v="1">गाह्रो<span class="en">Hard</span></button>
+          <button type="button" class="btn btn-ok" data-act="rate" data-v="2">ठीक छ<span class="en">OK</span></button>
+          <button type="button" class="btn btn-green" data-act="rate" data-v="3">राम्रो<span class="en">Good</span></button>
+        </div>
+        ${ratedVal ? `<p class="status">सेभ भयो।<span class="en">Saved.</span></p>` : ""}
+        <button type="button" class="next" data-act="next-item" ${ratedVal ? "" : "disabled"}>अर्को<span class="en">Next</span></button>
+        ${slowToggle()}`;
+    }
+
+    function renderLessonDone() {
+      const lesson = LESSONS[lessonIndex];
+      return `<div class="card done-card">
+        <h2>पाठ सकियो<span class="en">Lesson complete</span></h2>
+        <p class="lead">${lesson.titleNe}<span class="en">${lesson.titleEn}</span></p>
+        <button type="button" class="start" data-act="next-lesson">अर्को पाठ<span class="en">Next lesson</span></button>
+        <button type="button" class="ghost" style="width:100%" data-act="home">गृह<span class="en">Home</span></button>
+      </div>`;
+    }
+
+    function renderAllDone() {
+      return `<div class="card done-card">
+        <h2>सबै अभ्यास सकियो<span class="en">You’re done for now</span></h2>
+        <p class="lead">चाहनुभयो भने फेरि सुरु गर्न सक्नुहुन्छ।
+          <span class="en">You can go back and practice again.</span>
+        </p>
+        <button type="button" class="start" data-act="home">गृह<span class="en">Home</span></button>
+      </div>`;
+    }
+
+    function render() {
+      const root = document.getElementById("app");
+      if (screen === "home") root.innerHTML = renderHome();
+      else if (screen === "practice") root.innerHTML = renderPractice();
+      else if (screen === "lesson-done") root.innerHTML = renderLessonDone();
+      else root.innerHTML = renderAllDone();
+    }
+
+    document.getElementById("app").addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-act]");
+      if (!btn) return;
+      const act = btn.getAttribute("data-act");
+      if (act === "dismiss-install") dismissInstall();
+      else if (act === "start") startFromHome();
+      else if (act === "home") { stopSpeech(); screen = "home"; render(); }
+      else if (act === "toggle-slow") setSlow(!state.slow);
+      else if (act === "open-lesson") openPractice(Number(btn.getAttribute("data-l")), 0, false);
+      else if (act === "listen") speakCurrent();
+      else if (act === "record") toggleRecord();
+      else if (act === "play-me") playMe();
+      else if (act === "rate") rate(Number(btn.getAttribute("data-v")));
+      else if (act === "guided-next") guidedNext();
+      else if (act === "next-item") nextItem();
+      else if (act === "next-lesson") goNextLesson();
+    });
+
+    render();
+    registerWorker();
+  </script>
+</body>
+</html>
